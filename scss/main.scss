@@ -1,0 +1,627 @@
+:root {
+  --font_cursive: "MonteCarlo", cursive;
+  --font_text: "Playfair Display", serif;
+  --color_primary: #caa257;
+  --color_secundary: #322a38;
+  --color_bg: #eae5ea;
+}
+
+body {
+  font-family: var(--font_text);
+  font-size: 22px;
+  color: #222222;
+}
+
+.my_container {
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.max_h_img {
+  max-height: 85px;
+}
+
+.my-6 {
+  margin: 6.25rem auto;
+}
+
+.c_primary {
+  color: var(--color_primary);
+}
+
+.line_divisor {
+  text-align: center;
+  padding: 0 1rem;
+  img {
+    // max-height: 40px;
+    width: 100%;
+  }
+}
+
+.lightSlider {
+  img {
+    width: 100%;
+  }
+}
+
+.btn {
+  font-family: "roboto";
+  font-size: 1.1rem;
+  border-radius: 2rem;
+  border: 0;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary {
+  background-color: var(--color_primary);
+  &:focus,
+  &:active,
+  &:hover {
+    background: var(--color_primary);
+    opacity: 0.8;
+    box-shadow: none;
+  }
+}
+
+.btn-secundary {
+  background-color: var(--color_secundary);
+  color: #fff !important;
+  &:focus,
+  &:active,
+  &:hover {
+    background: var(--color_secundary);
+    opacity: 0.8;
+    box-shadow: none;
+  }
+}
+
+.fnt_cursive {
+  font-family: var(--font_cursive);
+}
+
+.ttl_cursive_section {
+  font-family: var(--font_cursive);
+  font-size: 5.75rem;
+  font-weight: 550;
+  line-height: 1.1;
+}
+
+.ttl_text_section {
+  font-family: var(--font_text);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.wrapper_home_slide {
+  text-align: center;
+  min-height: 600px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  position: relative;
+  &::after {
+    content: "";
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0) 95%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+  }
+  .content_home {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 1rem;
+    z-index: 1;
+    color: #fff;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.25);
+    .ttl_cursive_section {
+      font-size: 6rem;
+    }
+    .name_novios {
+      font-size: 7.5rem;
+      margin-top: 150px;
+    }
+  }
+}
+
+.wrapper_presentations {
+  background: var(--color_bg);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 8rem;
+  .drawer_confirm_assis {
+    position: relative;
+    top: -65px;
+    .sec_confirm_assis {
+      background: #fff;
+      text-align: center;
+      max-width: 980px;
+      width: 100%;
+      padding: 1.5rem 1rem;
+      margin: 0 auto;
+      border-radius: 25rem;
+    }
+  }
+  .container_presentations {
+    text-align: center;
+    padding-top: 4rem;
+    .names_presentations {
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      .names {
+        color: var(--color_primary);
+        font-size: 4.5rem;
+        font-weight: 600;
+        line-height: 1;
+      }
+      img {
+        max-height: 120px;
+      }
+    }
+  }
+}
+
+.wrapper_break {
+  background-size: cover !important;
+  background-position: center center;
+  &.b_one {
+    background: url(../imgs/bg.png) no-repeat;
+    background-attachment: fixed;
+    padding: 1rem;
+    .contain_break_one {
+      background: #fff;
+      max-width: 650px;
+      text-align: center;
+      width: 100%;
+      margin: 16rem auto;
+      box-shadow: 0 0px 0 15px rgba(255, 255, 255, 0.35);
+      padding: 3rem 1rem;
+    }
+  }
+  &.b_two {
+    background: url(../imgs/bg.png) no-repeat;
+    background-attachment: fixed;
+    min-height: 500px;
+  }
+  &.b_three {
+    background: url(../imgs/bg.png) no-repeat;
+    background-attachment: fixed;
+    padding: 1rem;
+    .contain_break_one {
+      background: #fff;
+      max-width: 650px;
+      text-align: center;
+      width: 100%;
+      margin: 12rem auto;
+      box-shadow: 0 0px 0 15px rgba(255, 255, 255, 0.35);
+      padding: 3rem 1rem;
+    }
+  }
+}
+
+.wrapper_parents {
+  background: var(--color_bg);
+  .ttl_sec_godparents {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 0 0 100% 100%;
+    text-align: center;
+    padding: 4rem 0;
+    .ico {
+      max-height: 100px;
+    }
+    .ttl_text_section {
+      margin-top: 2rem;
+    }
+  }
+  .row_parents {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 0 6rem;
+    .cols {
+      text-align: center;
+      img {
+        max-height: 70px;
+      }
+    }
+  }
+}
+
+.wrapper_godparents {
+  background: var(--color_bg);
+  text-align: center;
+  padding-bottom: 8rem;
+  .content_godparents {
+    padding: 5rem 0;
+    .row_godparents {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: space-around;
+      .cols {
+        background: #f2eff2;
+        padding: 1rem 2rem;
+        max-width: 300px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.wrapper_wedding_date {
+  display: flex;
+  justify-content: space-between;
+  .sec_bg_wedding_date {
+    width: 100%;
+    background: url(../imgs/bg.png) no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
+  .sec_date_wedding {
+    width: 100%;
+    text-align: center;
+    .bg_ico {
+      padding: 1rem 0;
+      background: rgb(234, 229, 234);
+      background: linear-gradient(
+        180deg,
+        rgba(234, 229, 234, 1) 50%,
+        rgba(255, 255, 255, 1) 50%
+      );
+    }
+    .contain_info_date {
+      max-width: 450px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      img {
+        max-height: 550px;
+      }
+    }
+  }
+}
+
+.wrapper_location {
+  text-align: center;
+  margin-bottom: 6rem;
+  &.ceremony {
+    margin-top: 7rem;
+  }
+  .my_container {
+    .bi {
+      font-size: 3rem;
+    }
+  }
+}
+
+.wrapper_break_location {
+  background: url(../imgs/bg.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 600px;
+}
+
+.wrapper_dresscode {
+  text-align: center;
+  .sec_dresscode {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+    .item_dresscode {
+      background: #f2eff2;
+      max-width: 300px;
+      width: 100%;
+      padding: 2rem 0;
+      img {
+        max-height: 90px;
+      }
+    }
+  }
+}
+
+.wrapper_lodging {
+  text-align: center;
+  margin-top: 4rem;
+  .bi {
+    font-size: 3rem;
+  }
+  p {
+    max-width: 400px;
+    width: 100%;
+    margin: 3rem auto;
+  }
+}
+
+.wrapper_galery {
+  background: var(--color_bg);
+  margin-top: 9rem;
+  padding-bottom: 8rem;
+  text-align: center;
+  .ttl_galery {
+    margin-bottom: 3rem;
+    & > div {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(234, 229, 234, 1) 50%
+      );
+    }
+  }
+}
+
+.wrapper_gift_table {
+  background: var(--color_bg);
+  text-align: center;
+  .bi {
+    font-size: 5rem;
+  }
+  .ttl_gift {
+    margin-bottom: 3rem;
+  }
+  .sec_item_gift {
+    margin-bottom: 4rem;
+    display: block;
+    text-decoration: none;
+    color: #222222;
+    img {
+      max-width: 80%;
+    }
+  }
+  .sec_contain_sobres {
+    margin-top: 5rem;
+    .sec_card_debit {
+      display: flex;
+      justify-content: center;
+      padding: 2rem 0 7rem;
+      .box_card_debit {
+        background: #fff;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        .card_debit {
+          background: #fff;
+          border-radius: 1rem;
+          padding: 1.5rem;
+          border: 2px solid #333;
+        }
+      }
+    }
+  }
+}
+
+.wrapper_itinerary {
+  text-align: center;
+  padding: 5rem 0 8rem;
+  background-color: var(--color_bg);
+  .sec_items_itinerary {
+    margin-bottom: 3rem;
+    .box_item_itenerary {
+      background: #fff;
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 2rem;
+      img {
+        max-height: 80px;
+      }
+      .ttl_text_section {
+        font-weight: 600;
+        font-size: 2rem;
+        text-transform: lowercase;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+.wrapper_hashtag {
+  display: flex;
+  justify-content: space-between;
+  .bg_social_media {
+    width: 100%;
+    background: url(../imgs/bg_instagran.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .info_social_media {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    .contain_info_social {
+      max-width: 450px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      img {
+        max-height: 550px;
+      }
+      a {
+        color: #222222;
+      }
+    }
+  }
+}
+
+.wrapper_personal_inv {
+  background: url(../imgs/bg_instagran.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.wrapper_dayfree {
+  text-align: center;
+  margin: 6rem 0 4rem;
+  img {
+    max-height: 150px;
+  }
+}
+
+.wrapper_footer {
+  text-align: center;
+  .picture_foot {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(50, 42, 56, 1) 50%
+    );
+    img {
+      max-height: 450px;
+    }
+  }
+  .content_foot {
+    background: rgb(50, 42, 56);
+    padding: 3rem 0;
+    color: #fff;
+    h5 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper_home_slide {
+    .content_home {
+      .name_novios {
+        font-size: 6rem;
+        margin-top: 150px;
+      }
+    }
+  }
+  .wrapper_parents {
+    .row_parents {
+      display: flex;
+      justify-content: space-around;
+      padding: 5rem 0 6rem;
+    }
+  }
+  .wrapper_wedding_date {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    .sec_bg_wedding_date {
+      display: none;
+    }
+  }
+  .wrapper_hashtag {
+    flex-direction: column;
+    .bg_social_media {
+      min-height: 275px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .wrapper_presentations {
+    .drawer_confirm_assis {
+      .sec_confirm_assis {
+        border-radius: 2rem;
+      }
+    }
+  }
+  .wrapper_presentations {
+    .container_presentations {
+      .names_presentations {
+        padding-top: 4rem;
+        flex-direction: column;
+        img {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+  .wrapper_break.b_one {
+    padding: 1rem;
+    .contain_break_one {
+      margin: 12rem auto;
+    }
+  }
+  .wrapper_parents {
+    .ttl_sec_godparents {
+      padding: 4rem 0 8rem;
+    }
+    .row_parents {
+      flex-direction: column;
+      .cols {
+        margin-bottom: 5rem;
+        &:last-child {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+  .wrapper_godparents {
+    padding-bottom: 3rem;
+    .content_godparents {
+      .row_godparents {
+        align-items: center;
+        flex-direction: column;
+        .cols {
+          margin-bottom: 3rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .wrapper_dresscode {
+    .ttl_cursive_section {
+      line-height: 0.8;
+    }
+    .sec_dresscode {
+      flex-direction: column;
+      align-items: center;
+      .item_dresscode {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  .wrapper_presentations .container_presentations{
+    .picture_novios{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ttl_cursive_section {
+    font-size: 4.5rem !important;
+    // line-height: 1.1;
+  }
+  .wrapper_home_slide .content_home .name_novios {
+    font-size: 5.5rem;
+    margin-top: 100px;
+  }
+  .wrapper_parents .ttl_sec_godparents {
+    border-radius: 0 0 40% 40%;
+  }
+  .wrapper_wedding_date .sec_date_wedding .contain_info_date img {
+    max-height: 425px;
+}
+.wrapper_gift_table .sec_item_gift img {
+  max-width: 100%;
+}
+.wrapper_footer .picture_foot img {
+  max-height: 300px;
+}
+}
+
+@media screen and (max-width: 380px){
+  .btn{
+    width: 100%;
+  }
+}
