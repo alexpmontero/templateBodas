@@ -10,6 +10,7 @@ body {
   font-family: var(--font_text);
   font-size: 22px;
   color: #222222;
+  line-height: 1.25;
 }
 
 .my_container {
@@ -85,6 +86,50 @@ body {
   font-family: var(--font_text);
   text-transform: uppercase;
   font-size: 1.4rem;
+}
+
+.trans {
+  transition: 0.5s cubic-bezier(0.2, 0.61, 0.41, 0.95);
+}
+
+.mobile_confirm_assis {
+  font-family: "roboto";
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  z-index: 9;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+.mobile_confirm_assis.confirm_up {
+  bottom: 15px;
+}
+.mobile_confirm_assis .sec_confirm_assis {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 5rem;
+  padding: 1rem 0.75rem;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 15px;
+}
+.mobile_confirm_assis .sec_confirm_assis p {
+  line-height: 1;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+.mobile_confirm_assis .sec_confirm_assis .box_btns_confirm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.mobile_confirm_assis .sec_confirm_assis .box_btns_confirm .btn {
+  font-size: 0.95rem;
 }
 
 .wrapper_home_slide {
@@ -294,10 +339,10 @@ body {
 }
 
 .wrapper_break_location {
-  background: url(../imgs/bg.png) no-repeat;
+  background: url(../imgs/bg_location.png) no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 600px;
+  min-height: 500px;
 }
 
 .wrapper_dresscode {
@@ -461,6 +506,7 @@ body {
 .wrapper_footer .content_foot {
   background: #322a38;
   padding: 3rem 0;
+  padding-bottom: 8rem;
   color: #fff;
 }
 .wrapper_footer .content_foot h5 {
@@ -485,7 +531,13 @@ body {
     flex-direction: column;
   }
   .wrapper_wedding_date .sec_bg_wedding_date {
-    display: none;
+    min-height: 650px;
+  }
+  .wrapper_wedding_date .sec_date_wedding {
+    margin-top: -55px;
+  }
+  .wrapper_wedding_date .sec_date_wedding .bg_ico {
+    background: transparent;
   }
 
   .wrapper_hashtag {
@@ -493,6 +545,23 @@ body {
   }
   .wrapper_hashtag .bg_social_media {
     min-height: 275px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .mobile_confirm_assis.confirm_up {
+    bottom: 0;
+  }
+  .mobile_confirm_assis .sec_confirm_assis {
+    flex-direction: column;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .mobile_confirm_assis .sec_confirm_assis .box_btns_confirm {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+  .mobile_confirm_assis .sec_confirm_assis .box_btns_confirm .btn {
+    line-height: 1.2;
   }
 }
 @media screen and (max-width: 580px) {
@@ -558,8 +627,29 @@ body {
   }
 }
 @media screen and (max-width: 480px) {
+  .mobile_confirm_assis .sec_confirm_assis {
+    padding: 0.75rem;
+  }
+  .mobile_confirm_assis .sec_confirm_assis .box_btns_confirm {
+    display: flex;
+    justify-content: center;
+  }
+  .mobile_confirm_assis .sec_confirm_assis .box_btns_confirm .btn {
+    font-size: 0.95rem;
+    line-height: 1.2;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .ttl_cursive_section {
     font-size: 4.5rem !important;
+  }
+
+  .wrapper_galery {
+    background: var(--color_bg);
+    margin-top: 7rem;
+    padding-bottom: 5rem;
+    text-align: center;
   }
 
   .wrapper_home_slide .content_home .name_novios {
@@ -586,5 +676,19 @@ body {
 @media screen and (max-width: 380px) {
   .btn {
     width: 100%;
+  }
+
+  .mobile_confirm_assis .sec_confirm_assis {
+    flex-direction: column;
+    border-radius: 2rem 2rem 0 0;
+  }
+  .mobile_confirm_assis .sec_confirm_assis .box_btns_confirm {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+  }
+  .mobile_confirm_assis .sec_confirm_assis .box_btns_confirm .btn span {
+    display: block;
   }
 }

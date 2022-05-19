@@ -10,6 +10,7 @@ body {
   font-family: var(--font_text);
   font-size: 22px;
   color: #222222;
+  line-height: 1.25;
 }
 
 .my_container {
@@ -92,6 +93,51 @@ body {
   font-family: var(--font_text);
   text-transform: uppercase;
   font-size: 1.4rem;
+}
+
+.trans {
+  -webkit-transition: 0.5s cubic-bezier(0.2, 0.61, 0.41, 0.95);
+  transition: 0.5s cubic-bezier(0.2, 0.61, 0.41, 0.95);
+}
+
+.mobile_confirm_assis {
+  font-family: "roboto";
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  z-index: 9;
+  padding: 0 0.5rem;
+  width: 100%;
+  &.confirm_up{
+    bottom: 15px;
+  }
+  .sec_confirm_assis {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 5rem;
+    padding: 1rem 0.75rem;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 15px;
+    p {
+      line-height: 1;
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+    .box_btns_confirm {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      .btn{
+        font-size: .95rem;
+      }
+    }
+  }
 }
 
 .wrapper_home_slide {
@@ -311,10 +357,10 @@ body {
 }
 
 .wrapper_break_location {
-  background: url(../imgs/bg.png) no-repeat;
+  background: url(../imgs/bg_location.png) no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 600px;
+  min-height: 500px;
 }
 
 .wrapper_dresscode {
@@ -485,6 +531,8 @@ body {
   .content_foot {
     background: rgb(50, 42, 56);
     padding: 3rem 0;
+    padding-bottom: 8rem;
+
     color: #fff;
     h5 {
       font-size: 2rem;
@@ -513,13 +561,42 @@ body {
     justify-content: space-around;
     flex-direction: column;
     .sec_bg_wedding_date {
-      display: none;
+      min-height: 650px;
+    }
+    .sec_date_wedding {
+      margin-top: -55px;
+      .bg_ico {
+        background: transparent;
+      }
     }
   }
   .wrapper_hashtag {
     flex-direction: column;
     .bg_social_media {
       min-height: 275px;
+    }
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .mobile_confirm_assis {
+    &.confirm_up{
+      bottom: 0;
+    }
+    .sec_confirm_assis {
+      flex-direction: column;
+      border-radius: 1rem 1rem 0 0;
+      .box_btns_confirm {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        .btn {
+          // font-size: 0.8rem;
+          line-height: 1.2;
+          // padding-left: 10px;
+          // padding-right: 10px;
+        }
+      }
     }
   }
 }
@@ -590,18 +667,39 @@ body {
       }
     }
   }
-  .wrapper_presentations .container_presentations{
-    .picture_novios{
+  .wrapper_presentations .container_presentations {
+    .picture_novios {
       width: 100%;
     }
   }
 }
 
 @media screen and (max-width: 480px) {
+  .mobile_confirm_assis {
+    .sec_confirm_assis {
+      padding: 0.75rem;
+      .box_btns_confirm {
+        display: flex;
+        justify-content: center;
+        .btn {
+          font-size: 0.95rem;
+          line-height: 1.2;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
   .ttl_cursive_section {
     font-size: 4.5rem !important;
     // line-height: 1.1;
   }
+  .wrapper_galery {
+    background: var(--color_bg);
+    margin-top: 7rem;
+    padding-bottom: 5rem;
+    text-align: center;
+}
   .wrapper_home_slide .content_home .name_novios {
     font-size: 5.5rem;
     margin-top: 100px;
@@ -611,17 +709,36 @@ body {
   }
   .wrapper_wedding_date .sec_date_wedding .contain_info_date img {
     max-height: 425px;
-}
-.wrapper_gift_table .sec_item_gift img {
-  max-width: 100%;
-}
-.wrapper_footer .picture_foot img {
-  max-height: 300px;
-}
+  }
+  .wrapper_gift_table .sec_item_gift img {
+    max-width: 100%;
+  }
+  .wrapper_footer .picture_foot img {
+    max-height: 300px;
+  }
 }
 
-@media screen and (max-width: 380px){
-  .btn{
+@media screen and (max-width: 380px) {
+  .btn {
     width: 100%;
+  }
+  .mobile_confirm_assis {
+   
+    .sec_confirm_assis {
+      flex-direction: column;
+      border-radius: 2rem 2rem 0 0;
+      .box_btns_confirm {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        width: 100%;
+        .btn {
+
+          span{
+            display: block;
+          }
+        }
+      }
+    }
   }
 }

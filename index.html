@@ -27,7 +27,7 @@
 
     <!-- CSS only -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&family=MonteCarlo&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=MonteCarlo&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -45,6 +45,31 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <div class="mobile_confirm_assis trans">
+      <div class="sec_confirm_assis">
+        <div>
+          <h6 class="text-uppercase mb-1">
+            <strong>¡Confirma tu asistencia!</strong>
+          </h6>
+          <p>Enviamos un mensajito...</p>
+        </div>
+        <div class="box_btns_confirm">
+          <a
+            href="https://wa.me/9931671459?text=Hola%20Karla,%20Sera%20un%20placer%20acompañarles%20en%20su%20día.%20Muchas%20gracias%20y%20que...%20*¡Viva%20el%20Amor!*"
+            class="btn btn-primary"
+            target="_blank"
+            ><i class="bi bi-whatsapp"></i> Confirmar a <span>Karla</span></a
+          >
+          <a
+            href="https://wa.me/9932907177?text=Hola%20Rafa,%20Sera%20un%20placer%20acompañarles%20en%20su%20día.%20Muchas%20gracias%20y%20que...%20*¡Viva%20el%20Amor!*"
+            class="btn btn-secundary"
+            target="_blank"
+            ><i class="bi bi-whatsapp"></i> Confirmar a <span>Rafael</span></a
+          >
+        </div>
+      </div>
+    </div>
+
     <section class="wrapper_home_slide vegas_home">
       <div class="content_home">
         <h1 class="ttl_cursive_section">Nuestra boda</h1>
@@ -58,13 +83,19 @@
     <section class="wrapper_presentations">
       <div class="drawer_confirm_assis">
         <div class="sec_confirm_assis">
-          <h3>¡Confirma tu asistencia!</h3>
+          <h3 class="text-uppercase">¡Confirma tu asistencia!</h3>
           <p>Da click y enviamos un mensajito para confirmar tu asistencia</p>
           <div>
-            <a href="#" class="btn btn-primary mb-3"
+            <a
+              href="https://wa.me/9931671459?text=Hola%20Karla,%20Sera%20un%20placer%20acompañarles%20en%20su%20día.%20Muchas%20gracias%20y%20que...%20*¡Viva%20el%20Amor!*"
+              class="btn btn-primary mb-3"
+              target="_blank"
               ><i class="bi bi-whatsapp"></i> Confirmar a Karla</a
             >
-            <a href="#" class="btn btn-secundary mb-3"
+            <a
+              href="https://wa.me/9932907177?text=Hola%20Rafa,%20Sera%20un%20placer%20acompañarles%20en%20su%20día.%20Muchas%20gracias%20y%20que...%20*¡Viva%20el%20Amor!*"
+              class="btn btn-secundary mb-3"
+              target="_blank"
               ><i class="bi bi-whatsapp"></i> Confirmar a Rafael</a
             >
           </div>
@@ -72,7 +103,7 @@
       </div>
       <div class="container_presentations">
         <img
-        class="picture_novios"
+          class="picture_novios"
           src="https://picsum.photos/500/300"
           alt="Presentación de los novios"
         />
@@ -133,16 +164,14 @@
     </section>
 
     <section class="wrapper_godparents">
-      <div class="line_divisor">
-        <img src="imgs/line.png" alt="Boda Karla y Rafael" />
-      </div>
-
       <div class="my_container">
+        <div class="line_divisor">
+          <img src="imgs/line.png" alt="Boda Karla y Rafael" />
+        </div>
+
         <div class="content_godparents">
           <div>
-            <h5 class="ttl_text_section">
-              Y EN COMPAÑIA DE NUESTROS
-            </h5>
+            <h5 class="ttl_text_section">Y EN COMPAÑIA DE NUESTROS</h5>
             <h1 class="ttl_cursive_section">Padrinos de Velación</h1>
           </div>
           <div class="row_godparents">
@@ -260,21 +289,20 @@
       <div class="container-lg">
         <ul id="lightSlider">
           <li>
-            <img src="imgs/bg.png" alt="Boda Karla y Rafael">
+            <img src="imgs/bg.png" alt="Boda Karla y Rafael" />
           </li>
           <li>
-            <img src="imgs/bg.png" alt="Boda Karla y Rafael">
+            <img src="imgs/bg.png" alt="Boda Karla y Rafael" />
           </li>
           <li>
-            <img src="imgs/bg.png" alt="Boda Karla y Rafael">
+            <img src="imgs/bg.png" alt="Boda Karla y Rafael" />
           </li>
           <li>
-            <img src="imgs/bg.png" alt="Boda Karla y Rafael">
+            <img src="imgs/bg.png" alt="Boda Karla y Rafael" />
           </li>
           <li>
-            <img src="imgs/bg.png" alt="Boda Karla y Rafael">
+            <img src="imgs/bg.png" alt="Boda Karla y Rafael" />
           </li>
-         
         </ul>
       </div>
     </section>
@@ -458,6 +486,7 @@
     <script>
       $(document).ready(function () {
         vegasHome();
+        handleConfirmUp();
         $("#lightSlider").lightSlider({
           item: 4,
           auto: true,
@@ -466,7 +495,7 @@
           slideMove: 1,
           easing: "cubic-bezier(0.25, 0, 0.25, 1)",
           speed: 800,
-          slideMargin:30,
+          slideMargin: 30,
           responsive: [
             {
               breakpoint: 1080,

@@ -13,3 +13,16 @@ function vegasHome() {
     ],
   });
 }
+
+function handleConfirmUp () {
+  $(window).scroll(function () {
+
+    var cambio = ($(window).scrollTop() > 800) ? true : false;
+
+    if (cambio) {
+      $(".mobile_confirm_assis").addClass('confirm_up');
+    } else {
+      $(".mobile_confirm_assis").removeClass('confirm_up');
+    }
+  });
+}
