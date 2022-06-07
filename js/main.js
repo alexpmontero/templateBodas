@@ -4,12 +4,14 @@ function vegasHome() {
     delay: 6000,
     slidesToKeep: 1,
     transition: "fade2",
-    transitionDuration: 7000,
+    transitionDuration: 6000,
     animation: "random",
-    animationDuration: 7000,
+    animationDuration: 6000,
     slides: [
-      { src: "./imgs/vegas/bg.png" },
+      { src: "./imgs/vegas/bg01.jpg" },
       { src: "./imgs/vegas/bg02.jpg" },
+      { src: "./imgs/vegas/bg03.jpg" },
+      { src: "./imgs/vegas/bg04.jpg" },
     ],
   });
 }
