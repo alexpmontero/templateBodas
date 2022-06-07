@@ -191,10 +191,14 @@ body {
 }
 .wrapper_presentations .container_presentations {
   text-align: center;
+  padding: 0 1rem;
   padding-top: 4rem;
+  background: cadetblue;
+  max-width: 700px;
+  margin: 0 auto;
 }
 .wrapper_presentations .container_presentations .picture_novios {
-  max-height: 450px;
+  width: 100%;
 }
 .wrapper_presentations .container_presentations .names_presentations {
   padding-top: 2rem;
@@ -215,13 +219,11 @@ body {
   max-height: 120px;
 }
 
-.wrapper_break {
-  background-size: cover !important;
-  background-position: center center;
-}
 .wrapper_break.b_one {
   background: url(../imgs/bg_one.jpg) no-repeat;
   background-attachment: fixed;
+  background-size: cover !important;
+  background-position: center center;
   padding: 1rem;
 }
 .wrapper_break.b_one .contain_break_one {
@@ -236,12 +238,15 @@ body {
 .wrapper_break.b_two {
   background: url(../imgs/bg_two.jpg) no-repeat;
   background-attachment: fixed;
+  background-size: cover !important;
+  background-position: center center;
   min-height: 500px;
 }
 .wrapper_break.b_three {
   background: url(../imgs/bg_three.jpg) no-repeat;
   background-attachment: fixed;
-  background-position: center right !important;
+  background-size: cover !important;
+  background-position: center center;
   padding: 1rem;
 }
 .wrapper_break.b_three .contain_break_one {
@@ -574,7 +579,7 @@ body {
   }
 
   .wrapper_presentations .container_presentations .names_presentations {
-    padding-top: 4rem;
+    padding-top: 2rem;
     flex-direction: column;
   }
   .wrapper_presentations .container_presentations .names_presentations img {
@@ -586,6 +591,10 @@ body {
   }
   .wrapper_break.b_one .contain_break_one {
     margin: 12rem auto;
+  }
+
+  .wrapper_break.b_three {
+    background-position: center right;
   }
 
   .wrapper_parents .ttl_sec_godparents {
@@ -647,6 +656,10 @@ body {
 
   .ttl_cursive_section {
     font-size: 4.5rem !important;
+  }
+
+  .wrapper_location.ceremony {
+    margin-top: 4rem;
   }
 
   .wrapper_galery {

@@ -108,7 +108,7 @@ body {
   z-index: 9;
   padding: 0 0.5rem;
   width: 100%;
-  &.confirm_up{
+  &.confirm_up {
     bottom: 15px;
   }
   .sec_confirm_assis {
@@ -133,8 +133,8 @@ body {
       display: flex;
       justify-content: center;
       gap: 10px;
-      .btn{
-        font-size: .95rem;
+      .btn {
+        font-size: 0.95rem;
       }
     }
   }
@@ -202,9 +202,13 @@ body {
   }
   .container_presentations {
     text-align: center;
+    padding: 0 1rem;
     padding-top: 4rem;
-    .picture_novios{
-      max-height: 450px;
+    background: cadetblue;
+    max-width: 700px;
+    margin: 0 auto;
+    .picture_novios {
+      width: 100%;
     }
     .names_presentations {
       padding-top: 2rem;
@@ -228,11 +232,11 @@ body {
 }
 
 .wrapper_break {
-  background-size: cover !important;
-  background-position: center center;
   &.b_one {
     background: url(../imgs/bg_one.jpg) no-repeat;
     background-attachment: fixed;
+    background-size: cover !important;
+    background-position: center center;
     padding: 1rem;
     .contain_break_one {
       background: #fff;
@@ -247,13 +251,16 @@ body {
   &.b_two {
     background: url(../imgs/bg_two.jpg) no-repeat;
     background-attachment: fixed;
+    background-size: cover !important;
+    background-position: center center;
     min-height: 500px;
   }
   &.b_three {
     background: url(../imgs/bg_three.jpg) no-repeat;
     background-attachment: fixed;
-  background-position: center right !important;
-  padding: 1rem;
+    background-size: cover !important;
+    background-position: center center;
+    padding: 1rem;
     .contain_break_one {
       background: #fff;
       max-width: 650px;
@@ -584,7 +591,7 @@ body {
 
 @media screen and (max-width: 660px) {
   .mobile_confirm_assis {
-    &.confirm_up{
+    &.confirm_up {
       bottom: 0;
     }
     .sec_confirm_assis {
@@ -616,7 +623,7 @@ body {
   .wrapper_presentations {
     .container_presentations {
       .names_presentations {
-        padding-top: 4rem;
+        padding-top: 2rem;
         flex-direction: column;
         img {
           margin: 1rem 0;
@@ -629,6 +636,9 @@ body {
     .contain_break_one {
       margin: 12rem auto;
     }
+  }
+  .wrapper_break.b_three {
+    background-position: center right;
   }
   .wrapper_parents {
     .ttl_sec_godparents {
@@ -698,12 +708,15 @@ body {
     font-size: 4.5rem !important;
     // line-height: 1.1;
   }
+  .wrapper_location.ceremony {
+    margin-top: 4rem;
+}
   .wrapper_galery {
     background: var(--color_bg);
     margin-top: 7rem;
     padding-bottom: 5rem;
     text-align: center;
-}
+  }
   .wrapper_home_slide .content_home .name_novios {
     font-size: 5.5rem;
     margin-top: 100px;
@@ -727,7 +740,6 @@ body {
     width: 100%;
   }
   .mobile_confirm_assis {
-   
     .sec_confirm_assis {
       flex-direction: column;
       border-radius: 2rem 2rem 0 0;
@@ -737,8 +749,7 @@ body {
         gap: 5px;
         width: 100%;
         .btn {
-
-          span{
+          span {
             display: block;
           }
         }
