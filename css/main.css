@@ -167,7 +167,14 @@ body {
 }
 .wrapper_home_slide .content_home .name_novios {
   font-size: 7.5rem;
-  margin-top: 150px;
+}
+.wrapper_home_slide .content_home .box_img_name {
+  max-width: 425px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.wrapper_home_slide .content_home .box_img_name img {
+  width: 100%;
 }
 
 .wrapper_presentations {
@@ -193,7 +200,7 @@ body {
   text-align: center;
   padding: 0 1rem;
   padding-top: 4rem;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
 }
 .wrapper_presentations .container_presentations .picture_novios {
@@ -230,7 +237,7 @@ body {
   max-width: 650px;
   text-align: center;
   width: 100%;
-  margin: 16rem auto;
+  margin: 22rem auto;
   box-shadow: 0 0px 0 15px rgba(255, 255, 255, 0.35);
   padding: 3rem 1rem;
 }
@@ -255,7 +262,7 @@ body {
   max-width: 650px;
   text-align: center;
   width: 100%;
-  margin: 15rem auto;
+  margin: 22rem auto;
   box-shadow: 0 0px 0 15px rgba(255, 255, 255, 0.35);
   padding: 3rem 1rem;
 }
@@ -317,7 +324,7 @@ body {
   width: 100%;
   background: url(../imgs/bg_date.jpg) no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
 }
 .wrapper_wedding_date .sec_date_wedding {
   width: 100%;
@@ -352,6 +359,7 @@ body {
   background: url(../imgs/bg_location.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
   min-height: 500px;
 }
 
@@ -390,7 +398,7 @@ body {
 .wrapper_galery {
   background: var(--color_bg);
   margin-top: 9rem;
-  padding-bottom: 8rem;
+  padding-bottom: 9rem;
   text-align: center;
 }
 .wrapper_galery .ttl_galery {
@@ -399,40 +407,55 @@ body {
 .wrapper_galery .ttl_galery > div {
   background: linear-gradient(180deg, white 50%, #eae5ea 50%);
 }
+.wrapper_galery .ttl_galery .ttl_cursive_section {
+  padding-top: 4rem;
+}
 
 .wrapper_gift_table {
+  background: url(../imgs/vegas/bg01.jpg) no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 225px 2rem;
+  background-attachment: fixed;
+}
+.wrapper_gift_table .my_container_lg {
+  max-width: 980px;
+  padding: 4rem 8rem 2rem;
+  width: 100%;
+  margin: 0 auto;
   background: var(--color_bg);
   text-align: center;
 }
-.wrapper_gift_table .bi {
+.wrapper_gift_table .my_container_lg .bi {
   font-size: 5rem;
 }
-.wrapper_gift_table .ttl_gift {
+.wrapper_gift_table .my_container_lg .ttl_gift {
   margin-bottom: 3rem;
 }
-.wrapper_gift_table .sec_item_gift {
+.wrapper_gift_table .my_container_lg .sec_item_gift {
   margin-bottom: 4rem;
   display: block;
   text-decoration: none;
   color: #222222;
 }
-.wrapper_gift_table .sec_item_gift img {
+.wrapper_gift_table .my_container_lg .sec_item_gift img {
   max-width: 80%;
+  margin-bottom: 0.75rem;
 }
-.wrapper_gift_table .sec_contain_sobres {
+.wrapper_gift_table .my_container_lg .sec_contain_sobres {
   margin-top: 5rem;
 }
-.wrapper_gift_table .sec_contain_sobres .sec_card_debit {
+.wrapper_gift_table .my_container_lg .sec_contain_sobres .sec_card_debit {
   display: flex;
   justify-content: center;
   padding: 2rem 0 7rem;
 }
-.wrapper_gift_table .sec_contain_sobres .sec_card_debit .box_card_debit {
+.wrapper_gift_table .my_container_lg .sec_contain_sobres .sec_card_debit .box_card_debit {
   background: #fff;
   padding: 0.5rem;
   border-radius: 1rem;
 }
-.wrapper_gift_table .sec_contain_sobres .sec_card_debit .box_card_debit .card_debit {
+.wrapper_gift_table .my_container_lg .sec_contain_sobres .sec_card_debit .box_card_debit .card_debit {
   background: #fff;
   border-radius: 1rem;
   padding: 1.5rem;
@@ -523,6 +546,15 @@ body {
   font-size: 2rem;
 }
 
+@media screen and (max-width: 890px) {
+  .wrapper_gift_table {
+    padding: 125px 0.75rem;
+  }
+  .wrapper_gift_table .my_container_lg {
+    padding: 3rem 1.25rem 0rem;
+    text-align: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .wrapper_home_slide .content_home .name_novios {
     font-size: 6rem;
@@ -541,7 +573,7 @@ body {
     flex-direction: column;
   }
   .wrapper_wedding_date .sec_bg_wedding_date {
-    min-height: 650px;
+    min-height: 570px;
   }
   .wrapper_wedding_date .sec_date_wedding {
     margin-top: -55px;
@@ -683,7 +715,7 @@ body {
     max-height: 425px;
   }
 
-  .wrapper_gift_table .sec_item_gift img {
+  .wrapper_gift_table .my_container_lg .sec_item_gift img {
     max-width: 100%;
   }
 
